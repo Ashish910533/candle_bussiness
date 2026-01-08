@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAMRIDDHI AROMA CANDLES - Handcrafted scented and decorative candles inspired by Indian tradition. Premium candles for home décor, gifts, and spiritual ambiance.">
+    <title>SAMRIDDHI AROMA CANDLES - Handcrafted Scented & Decorative Candles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ivory: #FFFEF2;
+            --beige: #E8DCC4;
+            --warm-brown: #8B7355;
+            --muted-gold: #C9A961;
+            --dark-brown: #5D4E37;
+            --soft-white: #FAF8F3;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            background-color: var(--ivory);
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--soft-white);
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-brown);
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 70px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--warm-brown);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--muted-gold);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--warm-brown);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--beige) 0%, var(--ivory) 100%);
+            padding: 8rem 5% 6rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--dark-brown);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--warm-brown);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-family: inherit;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--muted-gold);
+            color: var(--dark-brown);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--warm-brown);
+            color: var(--ivory);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--warm-brown);
+            border: 2px solid var(--warm-brown);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--warm-brown);
+            color: var(--ivory);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-brown);
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Collections Grid */
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .collection-card {
+            background-color: var(--soft-white);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .collection-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .collection-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-brown);
+            font-weight: 500;
+        }
+
+        .collection-card p {
+            color: var(--warm-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background-color: var(--soft-white);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--beige), var(--muted-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-brown);
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--muted-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .product-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--warm-brown);
+            color: var(--ivory);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .product-btn:hover {
+            background-color: var(--muted-gold);
+            color: var(--dark-brown);
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--warm-brown);
+            line-height: 2;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--soft-white);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-method i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--muted-gold);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-brown);
+        }
+
+        .contact-method a {
+            color: var(--warm-brown);
+            text-decoration: none;
+        }
+
+        .contact-form {
+            background-color: var(--soft-white);
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-brown);
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--beige);
+            background-color: var(--ivory);
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--dark-brown);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Policies Section */
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-brown);
+        }
+
+        .policy-section p,
+        .policy-section ul {
+            color: var(--warm-brown);
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .policy-section ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Instagram Section */
+        .instagram-section {
+            background-color: var(--soft-white);
+            text-align: center;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .instagram-post {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--beige), var(--muted-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .instagram-post:hover {
+            opacity: 0.8;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--beige);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--muted-gold);
+        }
+
+        /* Hidden Pages */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--soft-white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" onclick="showPage('home')" class="logo">
+                <img src="a.jpg" alt="SAMRIDDHI AROMA CANDLES" class="logo-image">
+                <span style="font-size: 1.1rem;">SAMRIDDHI<br>AROMA CANDLES</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('shop')">Shop</a></li>
+                <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#" onclick="showPage('policies')">Policies</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">☰</div>
+            <div class="nav-actions">
+                <button id="cartBtn" class="btn btn-secondary" onclick="showPage('cart')">🛒 <span id="cartCount">0</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>SAMRIDDHI AROMA CANDLES</h1>
+                <p>Premium handcrafted scented & decorative candles inspired by ancient Vedic traditions. Bringing light, warmth, and serenity into your home.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="showPage('shop')">Shop Now</button>
+                    <a href="https://wa.me/919084494147?text=Hi%20Samridhi%20Aroma%20Candles%2C%20I'd%20like%20to%20order%20candles" class="btn btn-secondary" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section>
+            <h2 class="section-title">Our Collections</h2>
+            <p class="section-subtitle">Each SAMRIDDHI creation blends ancient Vedic wisdom with contemporary artistry and premium natural ingredients</p>
+            <div class="collections-grid">
+                <div class="collection-card" onclick="filterProducts('scented')">
+                    <div class="collection-icon">🕉️</div>
+                    <h3>Scented Candles</h3>
+                    <p>SAMRIDDHI's therapeutic aromatherapy collection featuring pure essential oil blends crafted to calm your mind and elevate your spirit</p>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+                <div class="collection-card" onclick="filterProducts('decorative')">
+                    <div class="collection-icon">🪔</div>
+                    <h3>Decorative Candles</h3>
+                    <p>Handmoulded artistic designs inspired by sacred symbols, perfect as elegant home décor and spiritual focal points</p>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+                <div class="collection-card" onclick="filterProducts('gift')">
+                    <div class="collection-icon">🎁</div>
+                    <h3>Gift Collections</h3>
+                    <p>Curated SAMRIDDHI sets for festivals, weddings, housewarmings, and life's most meaningful celebrations</p>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="instagram-section">
+            <h2 class="section-title">Follow SAMRIDDHI's Journey</h2>
+            <p class="section-subtitle">Discover the artistry, inspiration, and stories behind our handcrafted candles @samriddhi_aroma_candles</p>
+            <div class="instagram-grid">
+                <div class="instagram-post">🕯️</div>
+                <div class="instagram-post">✨</div>
+                <div class="instagram-post">🌸</div>
+                <div class="instagram-post">🪔</div>
+                <div class="instagram-post">🌿</div>
+                <div class="instagram-post">💫</div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="https://instagram.com/samriddhi_aroma_candles" class="btn btn-primary" target="_blank">Follow Us on Instagram</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart" class="page">
+        <section>
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-container" id="cartContainer">
+                <div id="cartItems">Your cart is empty.</div>
+                <div style="margin-top:2rem; text-align:center;">
+                    <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Checkout Page -->
+    <div id="checkout" class="page">
+        <section>
+            <h2 class="section-title">Checkout</h2>
+            <div class="contact-container">
+                <form id="checkoutForm" onsubmit="completeOrder(event)">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea name="address" required></textarea>
+                    </div>
+                    <div style="margin-top:1rem; text-align:center;">
+                        <button class="btn btn-primary" type="submit">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Shop Page -->
+    <div id="shop" class="page">
+        <section>
+            <h2 class="section-title">Shop SAMRIDDHI Candles</h2>
+            <p class="section-subtitle">Every candle is meticulously handcrafted with love, care, and conscious spiritual intention</p>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <button class="btn btn-primary" onclick="filterProducts('all')" style="margin: 0 0.5rem;">All</button>
+                <button class="btn btn-secondary" onclick="filterProducts('scented')" style="margin: 0 0.5rem;">Scented</button>
+                <button class="btn btn-secondary" onclick="filterProducts('decorative')" style="margin: 0 0.5rem;">Decorative</button>
+                <button class="btn btn-secondary" onclick="filterProducts('gift')" style="margin: 0 0.5rem;">Gift Sets</button>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be rendered here by scripts.js -->
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section>
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <p><strong>SAMRIDDHI AROMA CANDLES</strong> was born from a profound belief: that light has the transformative power to elevate spaces, moods, and moments of our lives.</p>
+                
+                <p>Rooted deeply in ancient Vedic traditions where fire symbolized purity, divinity, and spiritual awakening, we craft each candle as a contemporary homage to timeless wisdom. Every piece is meticulously handmade with conscious intention, blending premium natural waxes, pure therapeutic essential oils, and masterful artistic moulding techniques—skills passed down through generations of authentic Indian craftsmanship.</p>
+                
+                <p>We are committed to slow living, mindful consumption, and celebrating the authentic beauty of handmade artistry. Our candles transcend mere products; they are rituals of calm, vessels of warmth, and silent companions on your journey toward inner peace and spiritual balance.</p>
+                
+                <p>Whether you're creating a personal sanctuary at home, honoring a sacred festival, or seeking the perfect meaningful gift, <strong>SAMRIDDHI AROMA CANDLES</strong> brings the gentle, enchanting glow of tradition into your modern life.</p>
+                
+                <p style="font-style: italic; color: var(--muted-gold); margin-top: 2rem; font-size: 1.2rem;">✦ Handcrafted with spiritual intention. Rooted in timeless tradition. Designed for modern living. ✦</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section>
+            <h2 class="section-title">Connect With SAMRIDDHI</h2>
+            <p class="section-subtitle">We'd love to hear from you. Reach out for custom orders, bulk inquiries, wedding collections, or to experience our artisanal creations.</p>
+            
+            <div class="contact-container">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i>📱</i>
+                        <h3>WhatsApp & Queries</h3>
+                        <a href="https://wa.me/919084494147" target="_blank">+91 9084494147</a>
+                    </div>
+                    <div class="contact-method">
+                        <i>☎️</i>
+                        <h3>Call Us</h3>
+                        <a href="tel:+919634499228">+91 9634499228</a>
+                    </div>
+                    <div class="contact-method">
+                        <i>📷</i>
+                        <h3>Instagram</h3>
+                        <a href="https://instagram.com/samriddhi_aroma_candles" target="_blank">@samriddhi_aroma_candles</a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--dark-brown);">Connect With Our Artisans</h3>
+                    <form onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea required placeholder="Tell us about your custom orders, bulk inquiries, or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Policies Page -->
+    <div id="policies" class="page">
+        <section>
+            <h2 class="section-title">Our Policies</h2>
+            
+            <div class="policy-section">
+                <h3>Shipping Policy</h3>
+                <p>We ship across India through trusted courier partners. Most orders are dispatched within 2-3 business days.</p>
+                <ul>
+                    <li>Free shipping on orders above ₹1,000</li>
+                    <li>Standard delivery takes 5-7 business days</li>
+                    <li>Express delivery available in select cities (1-3 days)</li>
+                    <li>All candles are carefully packaged to prevent damage during transit</li>
+                    <li>You'll receive a tracking number once your order ships</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Return & Replacement Policy</h3>
+                <p>Your satisfaction matters to us. We accept returns and exchanges within 7 days of delivery.</p>
+                <ul>
+                    <li>Products must be unused and in original packaging</li>
+                    <li>Return shipping costs are borne by the customer unless the product is defective</li>
+                    <li>Refunds processed within 5-7 business days after receiving the returned item</li>
+                    <li>Custom orders and gift sets are non-returnable unless damaged</li>
+                    <li>Contact us on WhatsApp for return requests</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Candle Care & Safety Instructions</h3>
+                <p>To ensure your candles burn beautifully

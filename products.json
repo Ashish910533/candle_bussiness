@@ -1,0 +1,14 @@
+[
+  {"id":1,"name":"Jasmine Bliss","price":499,"category":"scented","image":"🌸","slug":"jasmine-bliss","description":"Soft floral jasmine with calming notes."},
+  {"id":2,"name":"Sandalwood Serenity","price":599,"category":"scented","image":"🌿","slug":"sandalwood-serenity","description":"Warm sandalwood, earthy and grounding."},
+  {"id":3,"name":"Citrus Calm","price":449,"category":"scented","image":"🍋","slug":"citrus-calm","description":"Bright citrus to uplift your space."},
+  {"id":4,"name":"Rose Garden","price":549,"category":"scented","image":"🌹","slug":"rose-garden","description":"Romantic rose fragrance with depth."},
+  {"id":5,"name":"Lotus Sculpture","price":799,"category":"decorative","image":"🪷","slug":"lotus-sculpture","description":"Hand-moulded lotus-shaped decorative candle."},
+  {"id":6,"name":"Om Symbol","price":699,"category":"decorative","image":"🕉️","slug":"om-symbol","description":"Decorative candle with Om motif."},
+  {"id":7,"name":"Buddha Peace","price":899,"category":"decorative","image":"🧘","slug":"buddha-peace","description":"Meditative design inspired by serenity."},
+  {"id":8,"name":"Diya Traditional","price":649,"category":"decorative","image":"🪔","slug":"diya-traditional","description":"Traditional diya-inspired candle for rituals."},
+  {"id":9,"name":"Festival Joy Set","price":1299,"category":"gift","image":"🎁","slug":"festival-joy-set","description":"Curated festival gift set."},
+  {"id":10,"name":"Luxury Collection","price":1999,"category":"gift","image":"💝","slug":"luxury-collection","description":"Premium luxury gift collection."},
+  {"id":11,"name":"Wedding Blessing Set","price":1599,"category":"gift","image":"🌟","slug":"wedding-blessing-set","description":"Elegant set for weddings."},
+  {"id":12,"name":"Wellness Trio","price":1149,"category":"gift","image":"✨","slug":"wellness-trio","description":"Three scents for relaxation and balance."}
+]
