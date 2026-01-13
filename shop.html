@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop – Samriddhi Aroma Candles</title>
+  <meta name="description"
+    content="Browse our collection of handcrafted scented and decorative candles. Shop premium Indian candles with unique fragrance notes.">
+  <meta name="keywords" content="buy candles, scented candles, decorative candles, handmade candles India, shop">
+  <meta property="og:title" content="Shop Samriddhi Candles – Premium Handcrafted Collection">
+  <meta property="og:description"
+    content="Discover handcrafted candles with premium fragrance and modern Indian aesthetics.">
+  <meta property="og:url" content="https://samridhiaromacandles.com/shop.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo"><a href="index.html"><img src="logo.jpeg" alt="Samriddhi logo"
+              style="height:48px; object-fit:contain;"></a></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="policy.html">Policies</a></li>
+          </ul>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">
+          🛒 Cart <span id="cartCount" class="cart-count" style="display: none;">0</span>
+        </button>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">₹0</span>
+        </div>
+        <div class="summary-row" id="discountRow" style="display: none; color: #27ae60;">
+          <span>Discount (15%):</span>
+          <span id="discount">-₹0</span>
+        </div>
+        <div class="summary-row" id="deliveryRow" style="display: none; color: #27ae60;">
+          <span>Delivery:</span>
+          <span id="delivery">FREE 🎁</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total:</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="checkout()">Proceed to
+        Checkout</button>
+      <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="toggleCart()">Continue
+        Shopping</button>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+  <!-- Shop Section -->
+  <section class="light">
+    <div class="container">
+      <h1 style="margin-bottom: 1rem;">Our Collection</h1>
+      <p style="margin-bottom: 2rem; color: #666;">Discover our range of handcrafted scented and decorative candles,
+        each thoughtfully created to bring warmth and fragrance to your home.</p>
+
+      <!-- Special Offers Section -->
+      <div class="special-offers">
+        <div class="offer-card">
+          <div class="offer-icon">💰</div>
+          <h3>15% Discount</h3>
+          <p>Buy more than 5 items of the same product and get 15% discount instantly!</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">🚚</div>
+          <h3>Free Delivery</h3>
+          <p>Orders above ₹500 qualify for free delivery across India!</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">💬</div>
+          <h3>Bulk Orders</h3>
+          <p>Need wholesale quantities? WhatsApp us for negotiable bulk pricing & special deals!</p>
+        </div>
+      </div>
+
+      <!-- Filters & Sorting -->
+      <div class="filters-section">
+        <div class="filter-group">
+          <label>Filter by Category:</label>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-outline active" data-category="all"
+              onclick="filterByCategory('all'); this.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');">All</button>
+            <button class="btn btn-outline" data-category="Scented Candles"
+              onclick="filterByCategory('Scented Candles'); this.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');">Scented</button>
+            <button class="btn btn-outline" data-category="Decorative Candles"
+              onclick="filterByCategory('Decorative Candles'); this.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');">Decorative</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect">
+            <option value="">Default</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+
+        <div class="filter-group" style="flex: 1;">
+          <input type="text" id="searchInput" placeholder="Search candles..." style="flex: 1;">
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Samriddhi</h4>
+          <p>Premium handcrafted candles inspired by Indian tradition, prosperity, and calm living.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/samriddhi_aroma_candles" target="_blank" title="Instagram">📷</a>
+            <a href="https://wa.me/919084494147" target="_blank" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="policy.html">Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="https://wa.me/919084494147" target="_blank">WhatsApp Orders</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="policy.html">Shipping & Returns</a></li>
+            <li><a href="policy.html">Candle Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📱 <a href="https://wa.me/919084494147" target="_blank">+91 9084494147</a></p>
+          <p>✉️ <a href="mailto:rawatstorelaxmipur@gmail.com">rawatstorelaxmipur@gmail.com</a></p>
+          <p>📍 Handmade in India 🇮🇳</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Samriddhi Aroma Candles. All rights reserved. | <a href="policy.html">Privacy & Policies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

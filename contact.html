@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Samriddhi Aroma Candles</title>
+  <meta name="description"
+    content="Get in touch with Samriddhi Aroma Candles. We're here to help with orders, queries, and feedback.">
+  <meta name="keywords" content="contact, support, orders, customer service">
+  <meta property="og:title" content="Contact Samriddhi Aroma Candles">
+  <meta property="og:url" content="https://samridhiaromacandles.com/contact.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo"><a href="index.html"><img src="logo.jpeg" alt="Samriddhi logo"
+              style="height:48px; object-fit:contain;"></a></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="policy.html">Policies</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 40vh;">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Reach out with any questions or feedback.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="light">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+        <!-- Contact Form -->
+        <div>
+          <h2>Send us a Message</h2>
+          <form id="contactForm" onsubmit="handleContactFormSubmit(event)" style="margin-top: 2rem;">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h2>Contact Information</h2>
+
+          <div style="margin: 2rem 0;">
+            <h4 style="margin-bottom: 0.5rem;">📱 WhatsApp</h4>
+            <p style="margin-bottom: 1rem;">
+              <a href="https://wa.me/919084494147" target="_blank" class="btn btn-whatsapp"
+                style="display: inline-block;">Chat on WhatsApp</a>
+            </p>
+            <p style="color: #666; font-size: 0.9rem;">Quick responses for orders and queries. Available 9 AM - 9 PM
+              IST.</p>
+          </div>
+
+          <div style="margin: 2rem 0;">
+            <h4 style="margin-bottom: 0.5rem;">📧 Email</h4>
+            <p><a href="mailto:rawatstorelaxmipur@gmail.com">rawatstorelaxmipur@gmail.com</a></p>
+            <p style="color: #666; font-size: 0.9rem;">We'll respond within 24 hours.</p>
+          </div>
+
+          <div style="margin: 2rem 0;">
+            <h4 style="margin-bottom: 0.5rem;">🏠 Handmade in India</h4>
+            <p style="color: #666;">Based in India, serving customers nationwide and internationally.</p>
+          </div>
+
+          <div style="margin: 2rem 0;">
+            <h4 style="margin-bottom: 0.5rem;">📍 Follow Us</h4>
+            <p>
+              <a href="https://instagram.com/samriddhi_aroma_candles" target="_blank"
+                style="display: inline-block; margin-right: 1rem;">📷 Instagram</a>
+            </p>
+          </div>
+
+          <div style="background: #fef5e7; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+            <h4>Frequently Asked Questions</h4>
+            <p style="margin-top: 0.5rem;"><strong>How long does delivery take?</strong></p>
+            <p style="color: #666; margin-bottom: 1rem;">Delivery typically takes 5-7 business days within India.</p>
+
+            <p><strong>Can I return a candle?</strong></p>
+            <p style="color: #666; margin-bottom: 1rem;">Yes! We offer easy returns and exchanges within 7 days. See our
+              policies page for details.</p>
+
+            <p><strong>Do you ship internationally?</strong></p>
+            <p style="color: #666;">Contact us via WhatsApp for international shipping inquiries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section>
+    <div class="container-sm">
+      <div
+        style="text-align: center; background: linear-gradient(135deg, #f0e5d3, #fef5e7); padding: 3rem; border-radius: 12px;">
+        <h2>Ready to Order?</h2>
+        <p style="margin-bottom: 1.5rem;">Order directly on WhatsApp for a personalized shopping experience.</p>
+        <button class="btn btn-primary"
+          onclick="window.open('https://wa.me/919084494147?text=Hi! I want to place an order. Please help me.', '_blank')"
+          style="font-size: 1rem; padding: 1rem 2rem;">Start Ordering on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Samriddhi</h4>
+          <p>Premium handcrafted candles inspired by Indian tradition, prosperity, and calm living.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/samriddhi_aroma_candles" target="_blank" title="Instagram">📷</a>
+            <a href="https://wa.me/919084494147" target="_blank" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="policy.html">Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="https://wa.me/919084494147" target="_blank">WhatsApp Orders</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="policy.html">Shipping & Returns</a></li>
+            <li><a href="policy.html">Candle Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📱 <a href="https://wa.me/919084494147" target="_blank">+91 9084494147</a></p>
+          <p>✉️ <a href="mailto:rawatstorelaxmipur@gmail.com">rawatstorelaxmipur@gmail.com</a></p>
+          <p>📍 Handmade in India 🇮🇳</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Samriddhi Aroma Candles. All rights reserved. | <a href="policy.html">Privacy & Policies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

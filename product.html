@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details – Samriddhi Aroma Candles</title>
+  <meta name="description"
+    content="Discover detailed information about Samriddhi handcrafted candles including fragrance notes, burn time, and care instructions.">
+  <meta name="keywords" content="candle details, fragrance notes, burn time, candle care">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo"><a href="index.html"><img src="logo.jpeg" alt="Samriddhi logo"
+              style="height:48px; object-fit:contain;"></a></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="policy.html">Policies</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="light">
+    <div class="container">
+      <a href="shop.html" style="color: #8b6f47; margin-bottom: 2rem; display: inline-block;">← Back to Shop</a>
+
+      <div id="productDetails" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+        <!-- Placeholder for product content -->
+        <p>Loading product details...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section>
+    <div class="container">
+      <h2 style="margin-bottom: 2rem;">Related Products</h2>
+      <div class="products-grid" id="relatedProducts"></div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="dark">
+    <div class="container-sm">
+      <h2 style="text-align: center;">Ready to Order?</h2>
+      <p style="text-align: center; margin-bottom: 2rem;">Place your order on WhatsApp for a quick and personalized
+        experience.</p>
+      <div style="text-align: center;">
+        <button class="btn btn-secondary"
+          onclick="window.open('https://wa.me/919084494147?text=Hi! I want to place an order. Please help me.', '_blank')">Chat
+          on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Samriddhi</h4>
+          <p>Premium handcrafted candles inspired by Indian tradition, prosperity, and calm living.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/samriddhi_aroma_candles" target="_blank" title="Instagram">📷</a>
+            <a href="https://wa.me/919084494147" target="_blank" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="https://wa.me/919084494147" target="_blank">WhatsApp Orders</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="policy.html">Shipping & Returns</a></li>
+            <li><a href="policy.html">Candle Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📱 <a href="https://wa.me/919084494147" target="_blank">+91 9084494147</a></p>
+          <p>✉️ <a href="mailto:rawatstorelaxmipur@gmail.com">rawatstorelaxmipur@gmail.com</a></p>
+          <p>📍 Handmade in India 🇮🇳</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Samriddhi Aroma Candles. All rights reserved. | <a href="policy.html">Privacy & Policies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Get product ID from URL parameters
+    function getProductIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return parseInt(params.get('id'));
+    }
+
+    // Render product details
+    function renderProductDetails() {
+      const productId = getProductIdFromURL();
+      if (!productId) {
+        document.getElementById('productDetails').innerHTML = '<p>Product not found. Please return to the shop.</p>';
+        return;
+      }
+
+      const product = allProducts.find(p => p.id === productId);
+      if (!product) {
+        document.getElementById('productDetails').innerHTML = '<p>Product not found. Please return to the shop.</p>';
+        return;
+      }
+
+      document.getElementById('productDetails').innerHTML = `
+        <div>
+          <div style="aspect-ratio: 1; overflow: hidden; border-radius: 8px;">
+            <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x600?text=${encodeURIComponent(product.name)}'">
+          </div>
+        </div>
+        <div>
+          <div class="product-category">${product.category}</div>
+          <h1>${product.name}</h1>
+          <div style="font-size: 2rem; font-weight: 700; color: #8b6f47; margin: 1.5rem 0;">₹${product.price}</div>
+          
+          <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.8;">${product.description}</p>
+
+          <div style="background-color: #f9f7f3; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+            <h4 style="margin-bottom: 1rem; color: #8b6f47;">Product Details</h4>
+            <p><strong>Fragrance Notes:</strong> ${product.fragranceNotes}</p>
+            <p><strong>Burn Time:</strong> ${product.burnTime}</p>
+            <p><strong>Category:</strong> ${product.category}</p>
+          </div>
+
+          <div style="background-color: #fef5e7; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <h4 style="margin-bottom: 1rem; color: #8b6f47;">Care Instructions</h4>
+            <p>${product.careInstructions}</p>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin: 2rem 0;">
+            <button class="btn btn-primary" style="flex: 1; padding: 1rem;" onclick="orderOnWhatsApp(${product.id})">Order on WhatsApp</button>
+            <button class="btn btn-secondary" style="flex: 1; padding: 1rem;" onclick="window.location.href='shop.html'">Continue Shopping</button>
+          </div>
+
+          <div style="border-top: 1px solid #ddd4c4; padding-top: 1.5rem; margin-top: 1.5rem;">
+            <p style="color: #666; font-size: 0.9rem;">✓ Handmade in India</p>
+            <p style="color: #666; font-size: 0.9rem;">✓ Premium Natural Ingredients</p>
+            <p style="color: #666; font-size: 0.9rem;">✓ Easy Returns & Exchanges</p>
+          </div>
+        </div>
+      `;
+
+      // Update page title and meta
+      document.title = `${product.name} – Samriddhi Aroma Candles`;
+
+      // Render related products
+      renderRelatedProducts(productId);
+    }
+
+    // Load and render on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        renderProductDetails();
+      }, 500); // Wait for products to load
+    });
+  </script>
+</body>
+
+</html>

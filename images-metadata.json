@@ -1,0 +1,229 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "filename": "1.jpeg",
+      "category": "Scented Candles",
+      "title": "Prosperity Bliss",
+      "caption": "Premium scented candle with warm sandalwood and turmeric fragrance",
+      "description": "Handcrafted scented candle inspired by ancient Indian rituals. Blends sandalwood with warm turmeric notes for prosperity and auspiciousness.",
+      "usage": ["product-1", "featured", "bestsellers"]
+    },
+    {
+      "id": 2,
+      "filename": "2.jpeg",
+      "category": "Scented Candles",
+      "title": "Lotus Serenity",
+      "caption": "Delicate lotus and rose scented candle for meditation",
+      "description": "A meditation on calm living. Lotus and rose combine to create an atmosphere of peace and mindfulness for your wellness routine.",
+      "usage": ["product-2", "featured", "bestsellers"]
+    },
+    {
+      "id": 3,
+      "filename": "3.jpeg",
+      "category": "Scented Candles",
+      "title": "Incense Dreams",
+      "caption": "Rich incense-inspired candle with cedarwood and vanilla",
+      "description": "Evokes the mystique of Indian temples. A rich blend of incense and cedarwood that transforms any space into a sanctuary.",
+      "usage": ["product-3", "featured", "bestsellers"]
+    },
+    {
+      "id": 4,
+      "filename": "4.jpeg",
+      "category": "Decorative Candles",
+      "title": "Maharaja Gold",
+      "caption": "Luxury decorative candle with gold leaf and premium oud fragrance",
+      "description": "Luxury redefined. Handcrafted with muted gold accents and premium oud fragrance for special occasions and celebrations.",
+      "usage": ["product-4", "featured"]
+    },
+    {
+      "id": 5,
+      "filename": "5.jpeg",
+      "category": "Scented Candles",
+      "title": "Chai Nostalgia",
+      "caption": "Warm cardamom and cinnamon spiced candle reminiscent of traditional chai",
+      "description": "Warm and comforting. Reminiscent of traditional Indian chai, perfect for cozy evenings and creating a homely atmosphere.",
+      "usage": ["product-5"]
+    },
+    {
+      "id": 6,
+      "filename": "6.jpeg",
+      "category": "Decorative Candles",
+      "title": "Rose Garden Elegance",
+      "caption": "Hand-poured candle with rose, jasmine, and sandalwood fragrance",
+      "description": "A celebration of Indian florals. Hand-poured with premium ingredients and natural dyes for an elegant aesthetic.",
+      "usage": ["product-6"]
+    },
+    {
+      "id": 7,
+      "filename": "7.jpeg",
+      "category": "Scented Candles",
+      "title": "Himalayan Pine",
+      "caption": "Fresh mountain air-inspired candle with pine and eucalyptus",
+      "description": "Fresh mountain air in a candle. Crisp and invigorating for any space. Perfect for promoting focus and vitality.",
+      "usage": ["product-7"]
+    },
+    {
+      "id": 8,
+      "filename": "8.jpeg",
+      "category": "Scented Candles",
+      "title": "Mango Sunset",
+      "caption": "Tropical mango and coconut amber candle for festive occasions",
+      "description": "Tropical sweetness meets Indian warmth. A festive fragrance perfect for every celebration and joyful moment.",
+      "usage": ["product-8"]
+    },
+    {
+      "id": 9,
+      "filename": "9.jpeg",
+      "category": "Decorative Candles",
+      "title": "Silk & Saffron",
+      "caption": "Premium saffron candle with silk flower and musk notes",
+      "description": "The essence of Indian luxury. Premium saffron with delicate floral undertones. Limited edition perfect for gifting.",
+      "usage": ["product-9"]
+    },
+    {
+      "id": 10,
+      "filename": "10.jpeg",
+      "category": "Scented Candles",
+      "title": "Midnight Jasmine",
+      "caption": "Enchanting jasmine and vanilla candle for evening relaxation",
+      "description": "Enchanting and mysterious. Perfect for evening relaxation, meditation, and creating intimate moments.",
+      "usage": ["product-10"]
+    },
+    {
+      "id": 11,
+      "filename": "11.jpeg",
+      "category": "Decorative Candles",
+      "title": "Brahma Blessings",
+      "caption": "Spiritually-inspired incense and vetiver candle for meditation",
+      "description": "Spiritually inspired. Crafted with intention for healing and positive energy. Ideal for yoga and meditation spaces.",
+      "usage": ["product-11"]
+    },
+    {
+      "id": 12,
+      "filename": "12.jpeg",
+      "category": "Decorative Candles",
+      "title": "Festival Gold",
+      "caption": "Premium gold-accented candle perfect for Diwali and celebrations",
+      "description": "Celebrate every festive occasion. Premium handcrafted masterpiece ideal for Diwali, weddings, and special celebrations.",
+      "usage": ["product-12", "featured"]
+    },
+    {
+      "id": 13,
+      "filename": "13.jpeg",
+      "category": "Brand Lifestyle",
+      "title": "Handcrafted Heritage",
+      "caption": "Artisan craftsmanship showcasing traditional candle-making",
+      "description": "Each candle is carefully hand-poured by skilled artisans using traditional techniques passed down through generations.",
+      "usage": ["homepage-instagram", "about"]
+    },
+    {
+      "id": 14,
+      "filename": "14.jpeg",
+      "category": "Brand Lifestyle",
+      "title": "Natural Ingredients",
+      "caption": "Premium natural ingredients and essential oils used in our candles",
+      "description": "Sourced from the finest natural ingredients and essential oils for authentic, long-lasting fragrance.",
+      "usage": ["homepage-instagram", "about"]
+    },
+    {
+      "id": 15,
+      "filename": "15.jpeg",
+      "category": "Brand Lifestyle",
+      "title": "Indian Inspiration",
+      "caption": "Celebrating Indian traditions and modern aesthetics",
+      "description": "Modern tribute to Indian heritage, celebrating tradition while embracing contemporary design and wellness.",
+      "usage": ["homepage-instagram", "about"]
+    },
+    {
+      "id": 16,
+      "filename": "16.jpeg",
+      "category": "Brand Lifestyle",
+      "title": "Premium Quality",
+      "caption": "Close-up showcasing the premium finish and attention to detail",
+      "description": "Every element is chosen to ensure an exceptional burning experience and visual appeal.",
+      "usage": ["homepage-instagram"]
+    },
+    {
+      "id": 17,
+      "filename": "17.jpeg",
+      "category": "Atmosphere & Ambiance",
+      "title": "Peaceful Moments",
+      "caption": "Create serene ambiance with glowing candlelight",
+      "description": "Transform your space into a sanctuary of calm. Perfect for meditation, yoga, or quiet reflection.",
+      "usage": ["lifestyle"]
+    },
+    {
+      "id": 18,
+      "filename": "18.jpeg",
+      "category": "Atmosphere & Ambiance",
+      "title": "Festive Celebration",
+      "caption": "Illuminate special moments with warm, dancing candlelight",
+      "description": "Ideal for celebrations, gatherings, and creating memorable moments with loved ones.",
+      "usage": ["lifestyle"]
+    },
+    {
+      "id": 19,
+      "filename": "19.jpeg",
+      "category": "Gift & Packaging",
+      "title": "Premium Gift Box",
+      "caption": "Beautifully packaged candle ready for gifting",
+      "description": "Eco-friendly packaging with elegant presentation. Perfect gift for candle lovers and wellness enthusiasts.",
+      "usage": ["gift-guide"]
+    },
+    {
+      "id": 20,
+      "filename": "20.jpeg",
+      "category": "Gift & Packaging",
+      "title": "Collection Display",
+      "caption": "Samriddhi candle collection showcasing variety and elegance",
+      "description": "Browse our complete collection of handcrafted candles in various fragrances and styles.",
+      "usage": ["gift-guide", "shop"]
+    },
+    {
+      "id": 21,
+      "filename": "21.jpeg",
+      "category": "Process & Craftsmanship",
+      "title": "Hand-Pouring Process",
+      "caption": "Artisan hand-pouring melted wax into candle containers",
+      "description": "Each candle is hand-poured at optimal temperatures to ensure even burn and perfect texture.",
+      "usage": ["about", "process"]
+    },
+    {
+      "id": 22,
+      "filename": "22.jpeg",
+      "category": "Process & Craftsmanship",
+      "title": "Quality Inspection",
+      "caption": "Carefully inspecting finished candles for quality assurance",
+      "description": "Every candle undergoes rigorous quality checks for color, consistency, and burn performance.",
+      "usage": ["about", "process"]
+    },
+    {
+      "id": 23,
+      "filename": "23.jpeg",
+      "category": "Process & Craftsmanship",
+      "title": "Ingredient Selection",
+      "caption": "Sourcing premium natural ingredients and essential oils",
+      "description": "We carefully source only the finest natural ingredients and sustainable materials from trusted suppliers.",
+      "usage": ["about", "process"]
+    },
+    {
+      "id": 24,
+      "filename": "24.jpeg",
+      "category": "Wellness & Lifestyle",
+      "title": "Mindful Living",
+      "caption": "Creating moments of peace and mindfulness with Samriddhi",
+      "description": "Transform your daily routine into a wellness ritual. Perfect for meditation, yoga, or personal reflection.",
+      "usage": ["lifestyle", "wellness"]
+    }
+  ],
+  "categories": {
+    "Scented Candles": "Aromatic candles with authentic fragrance notes",
+    "Decorative Candles": "Premium decorative candles for special occasions",
+    "Brand Lifestyle": "Behind-the-scenes and brand heritage imagery",
+    "Atmosphere & Ambiance": "Lifestyle shots showing candles in-use",
+    "Gift & Packaging": "Packaging and gift presentation",
+    "Process & Craftsmanship": "Artisan craftsmanship and production process",
+    "Wellness & Lifestyle": "Wellness and mindful living inspiration"
+  }
+}
